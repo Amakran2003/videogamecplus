@@ -8,6 +8,14 @@
       "args": [],
       "cwd": "/Users/abderrazaqmakran/Documents/videogamecplus/Src",
       "program": "/Users/abderrazaqmakran/Documents/videogamecplus/Src/build/Debug/outDebug"
+    },
+    {
+      "type": "cmake",
+      "request": "launch",
+      "name": "Debug portfile(s)",
+      "cmakeDebugType": "external",
+      "pipeName": "\\\\.\\pipe\\vcpkg_ext_portfile_dbg",
+      "preLaunchTask": "Debug vcpkg commands"
     }
   ]
 }
