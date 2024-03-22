@@ -44,5 +44,11 @@ The `Game::run()` method will implement the game loop. It will clear the game wi
 ## Game Over Condition
 The `Game::update()` method will check if the bottom row of bubbles has reached the bottom of the screen. If it has, it will set a game over flag and stop the game loop.
 
+## Class diagram
+
+![Class Diagram](./diagram.png)
+
+
+## Conclusion
 This technical specification outlines the main classes and their methods and properties that will be used to implement the game. The actual implementation will involve creating these classes and implementing the described functionalities in C++ using the SFML library.
 
