@@ -10,7 +10,18 @@
 2. [Game Loop](#game-loop)
 3. [Game Over Condition](#game-over-condition)
 
-## Classes
+## Overview
+BubbleTea is a bubble shooter game where the player controls a turret at the bottom of the screen and shoots bubbles to match colors and clear the screen. The game will be implemented in C++ using the SFML library for graphics and input handling.
+
+## SFML library
+SFML (Simple and Fast Multimedia Library) is a cross-platform software development library designed to provide a simple interface to various multimedia components in computers. It is written in C++ and has bindings for various other languages. SFML provides modules for graphics, audio, network, and windowing, making it suitable for developing games and multimedia applications.
+
+To use SFML in a C++ project, you need to download and install the SFML library and link it to your project. The following tutorials provide instructions on how to set up SFML for different operating systems:
+- **Linux**: https://www.sfml-dev.org/tutorials/2.6/start-linux.php
+- **Windows**: https://www.sfml-dev.org/tutorials/2.6/start-vc.php
+- **Mac**: https://www.sfml-dev.org/tutorials/2.6/start-osx.php
+
+The source code is exacly the same for all operating systems.
 
 ### GameWindow
 The `GameWindow` class will encapsulate the SFML window. It will handle window events such as closing the window, clicking the left mouse button, and moving the mouse.
@@ -34,3 +45,4 @@ The `Game::run()` method will implement the game loop. It will clear the game wi
 The `Game::update()` method will check if the bottom row of bubbles has reached the bottom of the screen. If it has, it will set a game over flag and stop the game loop.
 
 This technical specification outlines the main classes and their methods and properties that will be used to implement the game. The actual implementation will involve creating these classes and implementing the described functionalities in C++ using the SFML library.
+
