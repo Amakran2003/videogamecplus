@@ -31,7 +31,7 @@ void updateAngle() {
 void shotBall() {
     updateAngle();
 
-    if (Keyboard::isKeyPressed(Keyboard::P))
+    if (Keyboard::isKeyPressed(Keyboard::Enter))
     {
         float speed = 1.0f; // Change this to the desired speed
 
