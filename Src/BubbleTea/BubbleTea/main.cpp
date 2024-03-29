@@ -1,6 +1,7 @@
 #include "SFML/Graphics.hpp"
 #include <iostream>
 #include <string>
+#include <cmath>
 #include "Bubble.h"
 #include "Turret.h"
 
@@ -16,22 +17,31 @@ float BOTTOM_LIMIT = 710.f;
 float x_Velocity = 0.f;
 float y_Velocity = 0.f;
 
-void shotBall() {
-    if (Mouse::isButtonPressed(Mouse::Left))
-    {
-        #ifdef _WIN32
-           // _WIN32 is defined for both 32 and 64-bit environments
-        x_Velocity = 0.f;
-        y_Velocity = -0.5f;
-        #else 
-        // __linux__ is defined for Linux
-        x_Velocity = 0.f;
-        y_Velocity = -5.0f; // Change
-        #endif
+float angleInDegrees = -90.0f; // Default angle
+
+void updateAngle() {
+    if (Keyboard::isKeyPressed(Keyboard::Left)) {
+        angleInDegrees -= 1.0f; // Decrease angle when left arrow key is pressed
     }
-    
+    else if (Keyboard::isKeyPressed(Keyboard::Right)) {
+        angleInDegrees += 1.0f; // Increase angle when right arrow key is pressed
+    }
 }
 
+void shotBall() {
+    updateAngle();
+
+    if (Keyboard::isKeyPressed(Keyboard::P))
+    {
+        float speed = 1.0f; // Change this to the desired speed
+
+        float angleInRadians = angleInDegrees * 3.14159f / 180.0f;
+        x_Velocity = speed * cos(angleInRadians);
+        y_Velocity = speed * sin(angleInRadians);
+
+        // Rest of your code...
+    }
+}
 
 
 
