@@ -28,13 +28,16 @@ class Bubble : public CircleShape
     public:
         float bubbleRadius = 10.f;
         float thickness = 5.f;
+
+        Vector2f bubblePosition;
         const Color fillColor;
         const Color outlineColor = Color::Blue;
 
         // Constructor for ShotBubble
-        Bubble(Color f) : fillColor(f) {
+        Bubble(Color f, float x, float y) : fillColor(f), bubblePosition(x,y) {
             setRadius(bubbleRadius); // Set the radius of the circle shape
             setFillColor(f); // Set the fill color of the circle shape
+            setPosition(bubblePosition);
         }
 
 };
@@ -43,17 +46,8 @@ class Bubble : public CircleShape
 
 int main() {
     RenderWindow window(VideoMode(800, 800), "SFML works!");
-    //CircleShape bubble(10.f);
 
-    Vector2f circlePosition(MIDDLE_LIMIT-10, BOTTOM_LIMIT - 40);
-
-    Bubble bubble(sf::Color::Cyan);
-
-    //bubble.setFillColor(Color::Cyan);
-    //bubble.setOutlineThickness(5.f);
-    //bubble.setOutlineColor(Color::Blue);
-
-    bubble.setPosition(circlePosition);
+    Bubble bubble(sf::Color::Cyan, MIDDLE_LIMIT - 10, BOTTOM_LIMIT - 40);
 
     // create an empty shape
     ConvexShape turret;
