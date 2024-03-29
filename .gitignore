@@ -11,3 +11,4 @@
 *.ink
 *.log
 *.tlog
+.sfml-app
