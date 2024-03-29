@@ -19,8 +19,15 @@ float y_Velocity = 0.f;
 void shotBall() {
     if (Mouse::isButtonPressed(Mouse::Left))
     {
+        #ifdef _WIN32
+           // _WIN32 is defined for both 32 and 64-bit environments
         x_Velocity = 0.f;
         y_Velocity = -0.5f;
+        #else 
+        // __linux__ is defined for Linux
+        x_Velocity = 0.f;
+        y_Velocity = -5.0f; // Change
+        #endif
     }
     
 }
