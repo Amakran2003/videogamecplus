@@ -73,7 +73,7 @@ void shotBall() {
 int main() {
     RenderWindow window(VideoMode(800, 800), "SFML works!");
 
-    Bubble bubble(sf::Color::Cyan, PositionType::ShotBubble_Pos);
+    Bubble bubble(sf::Color::Cyan, PositionType::ShotBubble_Pos, false);
 
     Turret turret(MIDDLE_LIMIT - 18, BOTTOM_LIMIT + 80, MIDDLE_LIMIT - 8, BOTTOM_LIMIT - 20, MIDDLE_LIMIT + 8, BOTTOM_LIMIT - 20, MIDDLE_LIMIT + 18, BOTTOM_LIMIT + 80, bubble);
 

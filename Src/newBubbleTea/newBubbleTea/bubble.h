@@ -14,5 +14,5 @@ public:
     const sf::Color outlineColor = sf::Color::Blue;
 
     // Constructor for ShotBubble
-    Bubble(sf::Color f, PositionType pos);
+    Bubble(sf::Color f, PositionType pos, bool exp);
 };
