@@ -2,6 +2,7 @@
 #include <iostream>
 #include <string>
 #include "Bubble.h"
+#include "Turret.h"
 
 using namespace std;
 using namespace sf;
@@ -33,19 +34,21 @@ int main() {
 
     Bubble bubble(sf::Color::Cyan, MIDDLE_LIMIT - 10, BOTTOM_LIMIT - 40);
 
+    Turret turret(MIDDLE_LIMIT - 18, BOTTOM_LIMIT + 80, MIDDLE_LIMIT - 8, BOTTOM_LIMIT - 20, MIDDLE_LIMIT + 8, BOTTOM_LIMIT - 20, MIDDLE_LIMIT + 18, BOTTOM_LIMIT + 80);
+
     // create an empty shape
-    ConvexShape turret;
+    //ConvexShape turret;
 
-    // resize it to 5 points
-    turret.setPointCount(4);
+    //// resize it to 5 points
+    //turret.setPointCount(4);
 
-    turret.setFillColor(Color::Magenta);
+    //turret.setFillColor(Color::Magenta);
 
-    // define the points
-    turret.setPoint(0, Vector2f(MIDDLE_LIMIT - 18, BOTTOM_LIMIT + 80));
-    turret.setPoint(1, Vector2f(MIDDLE_LIMIT - 8, BOTTOM_LIMIT - 20));
-    turret.setPoint(2, Vector2f(MIDDLE_LIMIT + 8, BOTTOM_LIMIT - 20));
-    turret.setPoint(3, Vector2f(MIDDLE_LIMIT + 18, BOTTOM_LIMIT + 80));
+    //// define the points
+    //turret.setPoint(0, Vector2f(MIDDLE_LIMIT - 18, BOTTOM_LIMIT + 80));
+    //turret.setPoint(1, Vector2f(MIDDLE_LIMIT - 8, BOTTOM_LIMIT - 20));
+    //turret.setPoint(2, Vector2f(MIDDLE_LIMIT + 8, BOTTOM_LIMIT - 20));
+    //turret.setPoint(3, Vector2f(MIDDLE_LIMIT + 18, BOTTOM_LIMIT + 80));
 
     while (window.isOpen())
     {
