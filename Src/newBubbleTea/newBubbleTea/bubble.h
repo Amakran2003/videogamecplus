@@ -15,4 +15,8 @@ public:
 
     // Constructor for ShotBubble
     Bubble(sf::Color f, PositionType pos, bool exp);
+
+    sf::Color getBubbleColor();
+    void detectCollision(bool detec);
+    void disappear(Bubble b);
 };

@@ -6,3 +6,7 @@ Bubble::Bubble(sf::Color f, PositionType pos, bool exp) : fillColor(f), exploded
     bubblePosition = convert_Pos(pos); // Retrieve position from Position class
     setPosition(bubblePosition);
 }
+
+sf::Color Bubble::getBubbleColor() {
+    return fillColor;
+}
