@@ -13,3 +13,4 @@ include
 *.tlog
 sfml-app
 *.json
+/.vscode
