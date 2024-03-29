@@ -4,11 +4,11 @@
 *.vs
 *.sln
 *.vsxproj
-.x64
-.include
+x64
+include
 *.vcxproj.filters
 *.vcxproj.user
 *.ink
 *.log
 *.tlog
-.sfml-app
+sfml-app
