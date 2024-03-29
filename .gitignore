@@ -12,3 +12,4 @@ include
 *.log
 *.tlog
 sfml-app
+*.json
