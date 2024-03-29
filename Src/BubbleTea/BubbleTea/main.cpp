@@ -23,7 +23,7 @@ void shotBall() {
     
 }
 
-class ShotBubble : public CircleShape
+class Bubble : public CircleShape
 {
     public:
         float bubbleRadius = 10.f;
@@ -32,7 +32,7 @@ class ShotBubble : public CircleShape
         const Color outlineColor = Color::Blue;
 
         // Constructor for ShotBubble
-        ShotBubble(Color f) : fillColor(f) {
+        Bubble(Color f) : fillColor(f) {
             setRadius(bubbleRadius); // Set the radius of the circle shape
             setFillColor(f); // Set the fill color of the circle shape
         }
@@ -43,13 +43,15 @@ class ShotBubble : public CircleShape
 
 int main() {
     RenderWindow window(VideoMode(800, 800), "SFML works!");
-    CircleShape bubble(10.f);
+    //CircleShape bubble(10.f);
 
     Vector2f circlePosition(MIDDLE_LIMIT-10, BOTTOM_LIMIT - 40);
 
-    bubble.setFillColor(Color::Cyan);
-    bubble.setOutlineThickness(5.f);
-    bubble.setOutlineColor(Color::Blue);
+    Bubble bubble(sf::Color::Cyan);
+
+    //bubble.setFillColor(Color::Cyan);
+    //bubble.setOutlineThickness(5.f);
+    //bubble.setOutlineColor(Color::Blue);
 
     bubble.setPosition(circlePosition);
 
