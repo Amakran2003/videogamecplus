@@ -1,5 +1,6 @@
 #pragma once
 #include "SFML/Graphics.hpp"
+#include "Position.h"
 
 class Bubble : public sf::CircleShape {
 public:
@@ -13,5 +14,5 @@ public:
     const sf::Color outlineColor = sf::Color::Blue;
 
     // Constructor for ShotBubble
-    Bubble(sf::Color f, float x, float y);
+    Bubble(sf::Color f, PositionType pos);
 };

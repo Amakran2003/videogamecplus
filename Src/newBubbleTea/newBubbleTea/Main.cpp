@@ -4,15 +4,10 @@
 #include <cmath>
 #include "Bubble.h"
 #include "Turret.h"
+#include "Position.h"
 
 using namespace std;
 using namespace sf;
-
-float LEFT_LIMIT = 10.f;
-float MIDDLE_LIMIT = 400.f;
-float RIGHT_LIMIT = 710.f;
-float TOP_LIMIT = 10.f;
-float BOTTOM_LIMIT = 710.f;
 
 float x_Velocity = 0.f;
 float y_Velocity = 0.f;
@@ -78,7 +73,7 @@ void shotBall() {
 int main() {
     RenderWindow window(VideoMode(800, 800), "SFML works!");
 
-    Bubble bubble(sf::Color::Cyan, MIDDLE_LIMIT - 10, BOTTOM_LIMIT - 40);
+    Bubble bubble(sf::Color::Cyan, PositionType::ShotBubble_Pos);
 
     Turret turret(MIDDLE_LIMIT - 18, BOTTOM_LIMIT + 80, MIDDLE_LIMIT - 8, BOTTOM_LIMIT - 20, MIDDLE_LIMIT + 8, BOTTOM_LIMIT - 20, MIDDLE_LIMIT + 18, BOTTOM_LIMIT + 80, bubble);
 
