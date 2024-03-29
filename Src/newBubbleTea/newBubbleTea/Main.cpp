@@ -80,21 +80,7 @@ int main() {
 
     Bubble bubble(sf::Color::Cyan, MIDDLE_LIMIT - 10, BOTTOM_LIMIT - 40);
 
-    Turret turret(MIDDLE_LIMIT - 18, BOTTOM_LIMIT + 80, MIDDLE_LIMIT - 8, BOTTOM_LIMIT - 20, MIDDLE_LIMIT + 8, BOTTOM_LIMIT - 20, MIDDLE_LIMIT + 18, BOTTOM_LIMIT + 80);
-
-    // create an empty shape
-    //ConvexShape turret;
-
-    //// resize it to 5 points
-    //turret.setPointCount(4);
-
-    //turret.setFillColor(Color::Magenta);
-
-    //// define the points
-    //turret.setPoint(0, Vector2f(MIDDLE_LIMIT - 18, BOTTOM_LIMIT + 80));
-    //turret.setPoint(1, Vector2f(MIDDLE_LIMIT - 8, BOTTOM_LIMIT - 20));
-    //turret.setPoint(2, Vector2f(MIDDLE_LIMIT + 8, BOTTOM_LIMIT - 20));
-    //turret.setPoint(3, Vector2f(MIDDLE_LIMIT + 18, BOTTOM_LIMIT + 80));
+    Turret turret(MIDDLE_LIMIT - 18, BOTTOM_LIMIT + 80, MIDDLE_LIMIT - 8, BOTTOM_LIMIT - 20, MIDDLE_LIMIT + 8, BOTTOM_LIMIT - 20, MIDDLE_LIMIT + 18, BOTTOM_LIMIT + 80, bubble);
 
     while (window.isOpen())
     {
