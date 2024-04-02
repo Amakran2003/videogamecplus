@@ -2,9 +2,9 @@
 #include <iostream>
 #include <string>
 #include <cmath>
-#include "Bubble.h"
-#include "Turret.h"
-#include "Position.h"
+#include "bubble.cpp"
+#include "turret.cpp"
+#include "Position.cpp"
 
 using namespace std;
 using namespace sf;
@@ -90,8 +90,11 @@ int main() {
         window.draw(bubble);
         window.draw(turret);
         window.display();
+        
 
-
+        updateAngle();
+        turret.setRotation(angleInDegrees + 90); // +90 because the turret is initially pointing upwards
+        
         shotBall(); 
 
         bubble.move(x_Velocity, y_Velocity);

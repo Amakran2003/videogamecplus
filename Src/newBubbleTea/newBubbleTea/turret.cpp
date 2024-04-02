@@ -11,4 +11,12 @@ Turret::Turret(float x0, float y0, float x1, float y1, float x2, float y2, float
     setPoint(1, secondPointPos);
     setPoint(2, thirdPointPos);
     setPoint(3, fourthPointPos);
+
+    // Set the origin to the top part of the turret
+    setOrigin((secondPointPos.x + thirdPointPos.x) / 2, (secondPointPos.y + thirdPointPos.y) / 2);
+}
+
+void Turret::setRotation(float angle) 
+{
+    sf::ConvexShape::setRotation(angle);
 }
