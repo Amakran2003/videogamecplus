@@ -44,10 +44,10 @@ float angleInDegrees = 90.0f; // Default angle
 
 void updateAngle() {
     if (Keyboard::isKeyPressed(Keyboard::Left)) {
-        angleInDegrees -= 0.01f; // Decrease angle when left arrow key is pressed
+        angleInDegrees -= 1.1f; // Decrease angle when left arrow key is pressed
     }
     else if (Keyboard::isKeyPressed(Keyboard::Right)) {
-        angleInDegrees += 0.01f; // Increase angle when right arrow key is pressed
+        angleInDegrees += 1.1f; // Increase angle when right arrow key is pressed
     }
 }
 
