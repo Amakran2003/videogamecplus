@@ -98,6 +98,34 @@ void shotBall() {
 
 #endif
 
+void randomColor(Bubble& bubble) {
+    srand(time(0));
+    int random = rand() % 6 + 1;
+    switch (random) {
+    case 1:
+        bubble.setFillColor(Color::Red);
+        break;
+    case 2:
+        bubble.setFillColor(Color::Green);
+        break;
+    case 3:
+        bubble.setFillColor(Color::Blue);
+        break;
+    case 4:
+        bubble.setFillColor(Color::Yellow);
+        break;
+    case 5:
+        bubble.setFillColor(Color::Magenta);
+        break;
+    case 6:
+        bubble.setFillColor(Color::Cyan);
+        break;
+    default:
+        bubble.setFillColor(Color::White);
+        break;
+    }
+}
+
 
 
 
@@ -134,6 +162,8 @@ sf::Sprite background(backgroundTexture);
         turret.setRotation(angleInDegrees + 90); // +90 because the turret is initially pointing upwards
         
         shotBall(); 
+
+        
 
         bubble.move(x_Velocity, y_Velocity);
         
