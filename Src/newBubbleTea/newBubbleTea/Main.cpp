@@ -2,9 +2,11 @@
 #include <iostream>
 #include <string>
 #include <cmath>
-#include "Bubble.h"
-#include "Turret.h"
-#include "Position.h"
+#include <cstdlib>
+#include <ctime>
+#include "Bubble.cpp"
+#include "Turret.cpp"
+#include "Position.cpp"
 
 using namespace std;
 using namespace sf;
@@ -68,6 +70,34 @@ void shotBall() {
 
 #endif
 
+void randomColor(Bubble& bubble) {
+    srand(time(0));
+    int random = rand() % 6 + 1;
+    switch (random) {
+    case 1:
+        bubble.setFillColor(Color::Red);
+        break;
+    case 2:
+        bubble.setFillColor(Color::Green);
+        break;
+    case 3:
+        bubble.setFillColor(Color::Blue);
+        break;
+    case 4:
+        bubble.setFillColor(Color::Yellow);
+        break;
+    case 5:
+        bubble.setFillColor(Color::Magenta);
+        break;
+    case 6:
+        bubble.setFillColor(Color::Cyan);
+        break;
+    default:
+        bubble.setFillColor(Color::White);
+        break;
+    }
+}
+
 
 
 int main() {
@@ -92,7 +122,13 @@ int main() {
         window.display();
 
 
+        // call random color before showing the bubble
+
+        randomColor(bubble);
+
         shotBall(); 
+
+        
 
         bubble.move(x_Velocity, y_Velocity);
 
