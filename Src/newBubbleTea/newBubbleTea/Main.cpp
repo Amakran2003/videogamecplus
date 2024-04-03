@@ -100,6 +100,7 @@ void shotBall() {
 
 
 
+
 int main() {
     RenderWindow window(VideoMode(800, 800), "SFML works!");
 
@@ -107,6 +108,12 @@ int main() {
 
     Turret turret(MIDDLE_LIMIT - 18, BOTTOM_LIMIT + 80, MIDDLE_LIMIT - 8, BOTTOM_LIMIT - 20, MIDDLE_LIMIT + 8, BOTTOM_LIMIT - 20, MIDDLE_LIMIT + 18, BOTTOM_LIMIT + 80, bubble);
 
+    sf::Texture backgroundTexture;
+    if(!backgroundTexture.loadFromFile("background.jpg")) {
+        // handle error
+    }
+
+sf::Sprite background(backgroundTexture);
     while (window.isOpen())
     {
         Event event;
@@ -117,8 +124,9 @@ int main() {
         }
 
         window.clear();
+        window.draw(background);
         window.draw(bubble);
-        window.draw(turret);
+        window.draw(turret);   
         window.display();
         
 
