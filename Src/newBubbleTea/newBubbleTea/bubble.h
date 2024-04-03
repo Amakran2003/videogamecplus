@@ -1,6 +1,6 @@
 #pragma once
 #include "SFML/Graphics.hpp"
-#include "Position.h"
+#include "position.h"
 
 class Bubble : public sf::CircleShape {
 public:
@@ -20,3 +20,14 @@ public:
     void detectCollision(bool detec);
     void disappear(Bubble b);
 };
+
+Bubble::Bubble(sf::Color f, PositionType pos, bool exp) : fillColor(f), exploded(exp) {
+    setRadius(bubbleRadius);
+    setFillColor(f);
+    bubblePosition = convert_Pos(pos); // Retrieve position from Position class
+    setPosition(bubblePosition);
+}
+
+sf::Color Bubble::getBubbleColor() {
+    return fillColor;
+}

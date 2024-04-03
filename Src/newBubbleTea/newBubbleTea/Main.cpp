@@ -2,9 +2,9 @@
 #include <iostream>
 #include <string>
 #include <cmath>
-#include "bubble.cpp"
-#include "turret.cpp"
-#include "Position.cpp"
+#include "bubble.h"
+#include "turret.h"
+#include "position.h"
 
 using namespace std;
 using namespace sf;
@@ -40,14 +40,14 @@ void shotBall() {
 }
 #else
 
-float angleInDegrees = -90.0f; // Default angle
+float angleInDegrees = 90.0f; // Default angle
 
 void updateAngle() {
     if (Keyboard::isKeyPressed(Keyboard::Left)) {
-        angleInDegrees -= 1.f; // Decrease angle when left arrow key is pressed
+        angleInDegrees -= 0.01f; // Decrease angle when left arrow key is pressed
     }
     else if (Keyboard::isKeyPressed(Keyboard::Right)) {
-        angleInDegrees += 1.f; // Increase angle when right arrow key is pressed
+        angleInDegrees += 0.01f; // Increase angle when right arrow key is pressed
     }
 }
 
@@ -58,7 +58,7 @@ void shotBall() {
     {
         float speed = 1.0f; // Change this to the desired speed
 
-        float angleInRadians = angleInDegrees * 3.14159f / 180.0f;
+        float angleInRadians = angleInDegrees * 3.14159f / 180.f;
         x_Velocity = speed * cos(angleInRadians);
         y_Velocity = speed * sin(angleInRadians);
 
@@ -98,6 +98,21 @@ int main() {
         shotBall(); 
 
         bubble.move(x_Velocity, y_Velocity);
+        
+        if (bubble.getPosition().x < 0 || bubble.getPosition().x > 800 || bubble.getPosition().y < 0 || bubble.getPosition().y > 800)
+        {
+            bubble.setPosition(MIDDLE_LIMIT - 10, BOTTOM_LIMIT - 40);
+            x_Velocity = 0;
+            y_Velocity = 0;
+
+            // Generate random RGB values
+            int r = rand() % 256;
+            int g = rand() % 256;
+            int b = rand() % 256;
+
+            // Set the color of the bubble
+            bubble.setFillColor(sf::Color(r, g, b));
+        }
 
 
     }
