@@ -105,13 +105,7 @@ int main() {
             x_Velocity = 0;
             y_Velocity = 0;
 
-            // Generate random RGB values
-            int r = rand() % 256;
-            int g = rand() % 256;
-            int b = rand() % 256;
 
-            // Set the color of the bubble
-            bubble.setFillColor(sf::Color(r, g, b));
         }
 
 
