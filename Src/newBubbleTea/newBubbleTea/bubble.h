@@ -4,7 +4,7 @@
 
 class Bubble : public sf::CircleShape {
 public:
-    float bubbleRadius = 10.f;
+    float bubbleRadius = 20.f;
     float thickness = 5.f;
 
     bool exploded = false;
