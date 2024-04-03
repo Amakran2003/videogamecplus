@@ -94,7 +94,7 @@ int main() {
 
         updateAngle();
         turret.setRotation(angleInDegrees + 90); // +90 because the turret is initially pointing upwards
-        
+
         shotBall(); 
 
         bubble.move(x_Velocity, y_Velocity);
