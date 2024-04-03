@@ -38,16 +38,16 @@ void shotBall() {
         // Rest of your code...
     }
 }
-#else
+#elif __APPLE__
 
 float angleInDegrees = 90.0f; // Default angle
 
 void updateAngle() {
     if (Keyboard::isKeyPressed(Keyboard::Left)) {
-        angleInDegrees -= 1.1f; // Decrease angle when left arrow key is pressed
+        angleInDegrees -= 0.1f; // Decrease angle when left arrow key is pressed
     }
     else if (Keyboard::isKeyPressed(Keyboard::Right)) {
-        angleInDegrees += 1.1f; // Increase angle when right arrow key is pressed
+        angleInDegrees += 0.1f; // Increase angle when right arrow key is pressed
     }
 }
 
@@ -65,6 +65,36 @@ void shotBall() {
         // Rest of your code...
     }
 }
+
+#else
+
+float angleInDegrees = 90.0f; // Default angle
+
+void updateAngle() {
+    if (Keyboard::isKeyPressed(Keyboard::Left)) {
+        angleInDegrees -= 0.5f; // Decrease angle when left arrow key is pressed
+    }
+    else if (Keyboard::isKeyPressed(Keyboard::Right)) {
+        angleInDegrees += 0.5f; // Increase angle when right arrow key is pressed
+    }
+}
+
+void shotBall() {
+    updateAngle();
+
+    if (Keyboard::isKeyPressed(Keyboard::Enter))
+    {
+        float speed = 5.0f; // Change this to the desired speed
+
+        float angleInRadians = angleInDegrees * 3.14159f / 180.f;
+        x_Velocity = speed * cos(angleInRadians);
+        y_Velocity = speed * sin(angleInRadians);
+
+        // Rest of your code...
+    }
+}
+
+
 
 #endif
 
