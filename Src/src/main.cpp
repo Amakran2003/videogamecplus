@@ -18,12 +18,7 @@ int main()
 
         // Clear the window
         window.clear(sf::Color::Black);
-
-        // Draw game objects
-
-        // Update game logic
-
-        // Display the window
+        
         window.display();
     }
 
