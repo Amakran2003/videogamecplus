@@ -1,21 +1,21 @@
 {
   "version": "0.2.0",
   "configurations": [
-    {
-      "name": "C/C++ Runner: Debug Session",
-      "type": "lldb",
-      "request": "launch",
-      "args": [],
-      "cwd": "/Users/abderrazaqmakran/Documents/videogamecplus/Src",
-      "program": "/Users/abderrazaqmakran/Documents/videogamecplus/Src/build/Debug/outDebug"
-    },
-    {
-      "type": "cmake",
-      "request": "launch",
-      "name": "Debug portfile(s)",
-      "cmakeDebugType": "external",
-      "pipeName": "\\\\.\\pipe\\vcpkg_ext_portfile_dbg",
-      "preLaunchTask": "Debug vcpkg commands"
-    }
-  ]
+	{
+		"name": "C/C++ Runner: Debug Session",
+		"type": "lldb",
+		"request": "launch",
+		"args": [],
+		"cwd": "/Users/abderrazaqmakran/Documents/videogamecplus/Src",
+		"program": "/Users/abderrazaqmakran/Documents/videogamecplus/Src/build/Debug/outDebug"
+	},
+	{
+		"type": "cmake",
+		"request": "launch",
+		"name": "Debug portfile(s)",
+		"cmakeDebugType": "external",
+		"pipeName": "\\\\.\\pipe\\vcpkg_ext_portfile_dbg",
+		"preLaunchTask": "Debug vcpkg commands"
+	}
+]
 }
