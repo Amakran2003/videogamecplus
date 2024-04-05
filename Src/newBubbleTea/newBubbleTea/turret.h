@@ -5,7 +5,7 @@
 class Turret : public sf::ConvexShape {
 public:
     int pointCount = 4;
-    const sf::Color fillColor = sf::Color::Magenta;
+    const sf::Color fillColor = sf::Color{128, 128, 128};
 
     sf::Vector2f firstPointPos;
     sf::Vector2f secondPointPos;
