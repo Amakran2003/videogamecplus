@@ -132,9 +132,20 @@ void randomColor(Bubble& bubble) {
 int main() {
     RenderWindow window(VideoMode(800, 800), "SFML works!");
 
-    Bubble bubble(sf::Color::Cyan, PositionType::ShotBubble_Pos, false);
+    Bubble shotBubble(sf::Color::Cyan, PositionType::ShotBubble_Pos, false);
 
-    Turret turret(MIDDLE_LIMIT - 18, BOTTOM_LIMIT + 80, MIDDLE_LIMIT - 8, BOTTOM_LIMIT - 20, MIDDLE_LIMIT + 8, BOTTOM_LIMIT - 20, MIDDLE_LIMIT + 18, BOTTOM_LIMIT + 80, bubble);
+    Turret turret(MIDDLE_LIMIT - 18, BOTTOM_LIMIT + 80, MIDDLE_LIMIT - 8, BOTTOM_LIMIT - 20, MIDDLE_LIMIT + 8, BOTTOM_LIMIT - 20, MIDDLE_LIMIT + 18, BOTTOM_LIMIT + 80, shotBubble);
+    Bubble bubble1(sf::Color::Cyan, PositionType::Row1_Bubble1, false);
+    Bubble bubble2(sf::Color::Red, PositionType::Row1_Bubble2, false);
+    Bubble bubble3(sf::Color::Yellow, PositionType::Row1_Bubble3, false);
+    Bubble bubble4(sf::Color::Green, PositionType::Row1_Bubble4, false);
+    Bubble bubble5(sf::Color::Black, PositionType::Row1_Bubble5, false);
+    Bubble bubble6(sf::Color::Magenta, PositionType::Row1_Bubble6, false);
+    Bubble bubble7(sf::Color::Green, PositionType::Row1_Bubble7, false);
+    Bubble bubble8(sf::Color::Cyan, PositionType::Row1_Bubble8, false);
+    Bubble bubble9(sf::Color::Blue, PositionType::Row1_Bubble9, false);
+    Bubble bubble10(sf::Color::Red, PositionType::Row1_Bubble10, false);
+
 
     sf::Texture backgroundTexture;
     if(!backgroundTexture.loadFromFile("background.jpg")) {
@@ -153,7 +164,18 @@ sf::Sprite background(backgroundTexture);
 
         window.clear();
         window.draw(background);
-        window.draw(bubble);
+        window.draw(shotBubble);
+        window.draw(bubble1);
+        window.draw(bubble2);
+        window.draw(bubble3);
+        window.draw(bubble4);
+        window.draw(bubble5);
+        window.draw(bubble6);
+        window.draw(bubble7);
+        window.draw(bubble8);
+        window.draw(bubble9);
+        window.draw(bubble10);
+
         window.draw(turret);   
         window.display();
         
@@ -165,11 +187,11 @@ sf::Sprite background(backgroundTexture);
 
         
 
-        bubble.move(x_Velocity, y_Velocity);
+        shotBubble.move(x_Velocity, y_Velocity);
         
-        if (bubble.getPosition().x < 0 || bubble.getPosition().x > 800 || bubble.getPosition().y < 0 || bubble.getPosition().y > 800)
+        if (shotBubble.getPosition().x < 0 || shotBubble.getPosition().x > 800 || shotBubble.getPosition().y < 0 || shotBubble.getPosition().y > 800)
         {
-            bubble.setPosition(MIDDLE_LIMIT - 10, BOTTOM_LIMIT - 40);
+            shotBubble.setPosition(MIDDLE_LIMIT - 10, BOTTOM_LIMIT - 40);
             x_Velocity = 0;
             y_Velocity = 0;
 
