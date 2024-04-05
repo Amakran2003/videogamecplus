@@ -1,6 +1,7 @@
 #include "GamePlay.hpp"
 #include "GameOver.hpp"
 #include "PauseGame.hpp"
+#include <SFML/Audio.hpp>
 
 #include <SFML/Window/Event.hpp>
 
@@ -116,6 +117,7 @@ void GamePlay::ProcessInput()
 
 void GamePlay::Update(const sf::Time &deltaTime)
 {
+
     if (!m_isPaused)
     {
         m_elapsedTime += deltaTime;
@@ -249,3 +251,4 @@ void GamePlay::Start()
 {
     m_isPaused = false;
 }
+

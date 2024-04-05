@@ -1,4 +1,4 @@
-# Game Name: Sneaky Snake
+# Game Name: Pizza Snake
 
 ## Overview:
 The game is a [genre of the game] where players [describe the main objective or gameplay mechanics]. It is set in [describe the game world or setting]. The game will feature [list key features or unique selling points].
@@ -6,20 +6,20 @@ The game is a [genre of the game] where players [describe the main objective or 
 ## Gameplay Mechanics:
 - The player controls a snake that moves around the game board.
 - The objective is to eat food and grow the snake's length.
-- The snake's movement is controlled by the arrow keys or WASD keys.
+- The snake's movement is controlled by the arrow keys .
 - If the snake collides with the game board boundaries or itself, the game ends.
 - The game speed increases as the snake grows, making it more challenging.
 
 ## Game Progression:
-- The game starts with a single snake segment.
+- The game starts with a 4 snake segment.
 - Each time the snake eats food, its length increases by one segment.
-- The player earns points for each food item eaten.
+- The player earns 1 point for each food item eaten.
 - The game ends when the snake collides with a boundary or itself.
-- The player's score is displayed at the end of the game.
+- The player's score is displayed during the game.
 
 ## Art Style and Graphics:
 - The game features simple 2D graphics.
-- The snake and food items are represented by colored squares.
+- The snake and food items are represented in 16x16 pixel art.
 - The game board is a grid-based layout.
 
 ## Sound and Music:
@@ -38,6 +38,3 @@ The game is a [genre of the game] where players [describe the main objective or 
 - The game is free to play and does not include any in-app purchases or premium features.
 - Monetization can be explored through ads or optional donations.
 
-## Release Date and Marketing:
-- The estimated release date is [insert date].
-- Marketing strategies can include social media promotion, game forums, and app store optimization.

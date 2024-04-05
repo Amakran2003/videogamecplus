@@ -9,7 +9,7 @@
 #include "Game.hpp"
 #include "State.hpp"
 #include "Snake.hpp"
-
+#include <SFML/Audio.hpp>
 class GamePlay : public Engine::State
 {
 public:
@@ -34,7 +34,7 @@ private:
     sf::Sprite m_food5;
     std::array<sf::Sprite, 4> m_walls;
     Snake m_snake;
-
+    
     sf::Text m_scoreText;
     int m_score;
     
