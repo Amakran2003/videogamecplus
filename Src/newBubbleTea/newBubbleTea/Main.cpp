@@ -197,26 +197,26 @@ sf::Sprite background(backgroundTexture);
         window.draw(bubble20);
 
         window.draw(turret);   
-        window.display();
-        
+        window.display();  
 
         updateAngle();
         turret.setRotation(angleInDegrees + 90); // +90 because the turret is initially pointing upwards
         
         shotBall(); 
 
-        
-
         shotBubble.move(x_Velocity, y_Velocity);
         
-        if (shotBubble.getPosition().x < 0 || shotBubble.getPosition().x > 800 || shotBubble.getPosition().y < 0 || shotBubble.getPosition().y > 800)
+        if (shotBubble.getPosition().x < 0 || shotBubble.getPosition().x  + shotBubble.bubbleRadius * 2 > 800 || shotBubble.getPosition().y < 0 || shotBubble.getPosition().y + shotBubble.bubbleRadius * 2 > 800)
         {
             shotBubble.setPosition(MIDDLE_LIMIT - 10, BOTTOM_LIMIT - 40);
             x_Velocity = 0;
             y_Velocity = 0;
 
-
         }
+
+        //To stop bubble when touching wall
+        // shotBubble.setPosition(0, shotBubble.getPosition().y);
+        
 
 
     }
