@@ -145,6 +145,16 @@ int main() {
     Bubble bubble8(sf::Color::Cyan, PositionType::Row1_Bubble8, false);
     Bubble bubble9(sf::Color::Blue, PositionType::Row1_Bubble9, false);
     Bubble bubble10(sf::Color::Red, PositionType::Row1_Bubble10, false);
+    Bubble bubble11(sf::Color::Cyan, PositionType::Row1_Bubble11, false);
+    Bubble bubble12(sf::Color::Red, PositionType::Row1_Bubble12, false);
+    Bubble bubble13(sf::Color::Yellow, PositionType::Row1_Bubble13, false);
+    Bubble bubble14(sf::Color::Green, PositionType::Row1_Bubble14, false);
+    Bubble bubble15(sf::Color::Black, PositionType::Row1_Bubble15, false);
+    Bubble bubble16(sf::Color::Magenta, PositionType::Row1_Bubble16, false);
+    Bubble bubble17(sf::Color::Green, PositionType::Row1_Bubble17, false);
+    Bubble bubble18(sf::Color::Cyan, PositionType::Row1_Bubble18, false);
+    Bubble bubble19(sf::Color::Blue, PositionType::Row1_Bubble19, false);
+    Bubble bubble20(sf::Color::Red, PositionType::Row1_Bubble20, false);
 
 
     sf::Texture backgroundTexture;
@@ -175,6 +185,16 @@ sf::Sprite background(backgroundTexture);
         window.draw(bubble8);
         window.draw(bubble9);
         window.draw(bubble10);
+        window.draw(bubble11);
+        window.draw(bubble12);
+        window.draw(bubble13);
+        window.draw(bubble14);
+        window.draw(bubble15);
+        window.draw(bubble16);
+        window.draw(bubble17);
+        window.draw(bubble18);
+        window.draw(bubble19);
+        window.draw(bubble20);
 
         window.draw(turret);   
         window.display();

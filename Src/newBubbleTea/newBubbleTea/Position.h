@@ -26,7 +26,17 @@ enum class PositionType {
     Row1_Bubble7,
     Row1_Bubble8,
     Row1_Bubble9,
-    Row1_Bubble10
+    Row1_Bubble10,
+    Row1_Bubble11,
+    Row1_Bubble12,
+    Row1_Bubble13,
+    Row1_Bubble14,
+    Row1_Bubble15,
+    Row1_Bubble16,
+    Row1_Bubble17,
+    Row1_Bubble18,
+    Row1_Bubble19,
+    Row1_Bubble20
 };
 
 sf::Vector2f convert_Pos(PositionType type); // Declaration of convert_Pos function
@@ -48,6 +58,16 @@ static const std::unordered_map<PositionType, sf::Vector2f> positionMap = {
     {PositionType::Row1_Bubble8, sf::Vector2f(LEFT_LIMIT+40*7, TOP_LIMIT)},
     {PositionType::Row1_Bubble9, sf::Vector2f(LEFT_LIMIT+40*8, TOP_LIMIT)},
     {PositionType::Row1_Bubble10, sf::Vector2f(LEFT_LIMIT+40*9, TOP_LIMIT)},
+    {PositionType::Row1_Bubble11, sf::Vector2f(LEFT_LIMIT+40*10, TOP_LIMIT)},
+    {PositionType::Row1_Bubble12, sf::Vector2f(LEFT_LIMIT+40*11, TOP_LIMIT)},
+    {PositionType::Row1_Bubble13, sf::Vector2f(LEFT_LIMIT+40*12, TOP_LIMIT)},
+    {PositionType::Row1_Bubble14, sf::Vector2f(LEFT_LIMIT+40*13, TOP_LIMIT)},
+    {PositionType::Row1_Bubble15, sf::Vector2f(LEFT_LIMIT+40*14, TOP_LIMIT)},
+    {PositionType::Row1_Bubble16, sf::Vector2f(LEFT_LIMIT+40*15, TOP_LIMIT)},
+    {PositionType::Row1_Bubble17, sf::Vector2f(LEFT_LIMIT+40*16, TOP_LIMIT)},
+    {PositionType::Row1_Bubble18, sf::Vector2f(LEFT_LIMIT+40*17, TOP_LIMIT)},
+    {PositionType::Row1_Bubble19, sf::Vector2f(LEFT_LIMIT+40*18, TOP_LIMIT)},
+    {PositionType::Row1_Bubble20, sf::Vector2f(LEFT_LIMIT+40*19, TOP_LIMIT)}
 };
 
 #endif
