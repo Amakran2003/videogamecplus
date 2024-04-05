@@ -13,7 +13,7 @@ float x_Velocity = 0.f;
 float y_Velocity = 0.f;
 
 #ifdef _WIN32
-float angleInDegrees = 90.0f; // Default angle
+float angleInDegrees = -90.0f; // Default angle
 
 void updateAngle() {
     if (Keyboard::isKeyPressed(Keyboard::Left)) {
@@ -40,7 +40,7 @@ void shotBall() {
 }
 #elif __APPLE__
 
-float angleInDegrees = 90.0f; // Default angle
+float angleInDegrees = -90.0f; // Default angle
 
 void updateAngle() {
     if (Keyboard::isKeyPressed(Keyboard::Left)) {
@@ -68,7 +68,7 @@ void shotBall() {
 
 #else
 
-float angleInDegrees = 90.0f; // Default angle
+float angleInDegrees = -90.0f; // Default angle
 
 void updateAngle() {
     if (Keyboard::isKeyPressed(Keyboard::Left)) {
